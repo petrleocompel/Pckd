@@ -5,7 +5,7 @@ WORKDIR /home/node/build
 # Install development dependencies
 COPY package.json .
 COPY package-lock.json .
-RUN npm install --include=dev
+RUN npm install --include=dev --legacy-peer-deps
 
 # Build react application
 COPY . .
